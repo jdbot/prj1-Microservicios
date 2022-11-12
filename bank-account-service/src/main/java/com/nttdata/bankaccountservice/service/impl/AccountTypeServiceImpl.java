@@ -3,10 +3,12 @@ package com.nttdata.bankaccountservice.service.impl;
 import com.nttdata.bankaccountservice.document.AccountType;
 import com.nttdata.bankaccountservice.service.AccountTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import com.nttdata.bankaccountservice.repository.AccountTypeRepository;
 
+@Service
 public class AccountTypeServiceImpl implements AccountTypeService {
 
     @Autowired
