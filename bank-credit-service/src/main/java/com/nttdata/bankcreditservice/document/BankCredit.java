@@ -17,12 +17,18 @@ public class BankCredit {
 
     @Id
     private String id;
+    //number credit of the bank credit
     private String numberCredit;
+    //amount of the bank credit
     private Float amount;
+    //end date of the bank credit
     private String endDate;
+    //id of the client
     private String customerId;
+    //full name of the client
     private String customerName;
 
     //@DocumentReference
+    //type of the bank credit
     private String type;
 }
