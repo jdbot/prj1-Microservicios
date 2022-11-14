@@ -10,5 +10,6 @@ public interface CreditTypeService {
     Mono<CreditType> register(CreditType creditType);
     Mono<CreditType> update(CreditType creditType);
     Mono<CreditType> findById(String id);
+    Mono<Void> delete(String id);
     Mono<Boolean> existsById(String id);
 }

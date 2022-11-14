@@ -36,6 +36,11 @@ public class BankCreditServiceImpl implements BankCreditService {
     }
 
     @Override
+    public Mono<Void> delete(String id) {
+        return this.bankCreditRepository.deleteById(id);
+    }
+
+    @Override
     public Mono<Boolean> existsById(String id) {
         return this.bankCreditRepository.existsById(id);
     }

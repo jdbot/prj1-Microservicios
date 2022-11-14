@@ -10,6 +10,7 @@ public interface BankAccountService {
     Mono<BankAccount> register(BankAccount bankAccount);
     Mono<BankAccount> update(BankAccount bankAccount);
     Mono<BankAccount> findById(String id);
+    Mono<Void> delete(String id);
     Mono<Boolean> existsById(String id);
 
 }

@@ -35,6 +35,11 @@ public class CreditTypeServiceImpl implements CreditTypeService {
     }
 
     @Override
+    public Mono<Void> delete(String id) {
+        return this.creditTypeRepository.deleteById(id);
+    }
+
+    @Override
     public Mono<Boolean> existsById(String id) {
         return this.creditTypeRepository.existsById(id);
     }

@@ -10,5 +10,6 @@ public interface AccountTypeService {
     Mono<AccountType> register(AccountType accountType);
     Mono<AccountType> update(AccountType accountType);
     Mono<AccountType> findById(String id);
+    Mono<Void> delete(String id);
     Mono<Boolean> existsById(String id);
 }

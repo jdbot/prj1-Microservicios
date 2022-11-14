@@ -35,6 +35,11 @@ public class AccountTypeServiceImpl implements AccountTypeService {
     }
 
     @Override
+    public Mono<Void> delete(String id) {
+        return this.accountTypeRepository.deleteById(id);
+    }
+
+    @Override
     public Mono<Boolean> existsById(String id) {
         return this.accountTypeRepository.existsById(id);
     }
