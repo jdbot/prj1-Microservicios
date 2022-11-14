@@ -19,9 +19,13 @@ public class Transaction {
     @Id
     public String id;
 
+    //Date of the transaction
     private String transactionDate;
+    //Amount of the transaction
     private double amount;
+    //Transaction's type: Deposit or Withdrawl
     private String type;
+    //Associated account's ID
     private String idAccount;
 
 }

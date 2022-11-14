@@ -16,9 +16,14 @@ public class Client {
     @Id
     public String id;
 
+    //Full name of the client
     private String name;
+    //Email of the client
     private String email;
+    //Phone of the client
     private String phone;
+    //Document (DNI or RUC) of the client
     private String document;
+    //Client's type: Person or Business
     private String type;
 }

@@ -18,15 +18,14 @@ public class ClientController {
     @Autowired
     private IClientService clientService;
 
-    Logger log = LoggerFactory.getLogger(ClientController.class);
-
+    //Method to get all the clients
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public Flux<Client> findAll(){
-        log.info("FindAll");
         return clientService.findAll();
     }
 
+    //Method to insert a new client
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
                  produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
@@ -34,6 +33,7 @@ public class ClientController {
         return  clientService.register(client);
     }
 
+    //Method to update a client
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
@@ -41,12 +41,14 @@ public class ClientController {
         return  clientService.update(client);
     }
 
+    //Method to get a client by ID
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Mono<Client> findById(@PathVariable("id") String id){
         return clientService.findById(id);
     }
 
+    //Method to delete a client
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Mono<Void> delete(@PathVariable("id") String id){
