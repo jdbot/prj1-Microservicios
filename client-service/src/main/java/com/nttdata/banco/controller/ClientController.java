@@ -2,6 +2,8 @@ package com.nttdata.banco.controller;
 
 import com.nttdata.banco.model.Client;
 import com.nttdata.banco.service.IClientService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,9 +18,12 @@ public class ClientController {
     @Autowired
     private IClientService clientService;
 
+    Logger log = LoggerFactory.getLogger(ClientController.class);
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public Flux<Client> findAll(){
+        log.info("FindAll");
         return clientService.findAll();
     }
 

@@ -22,5 +22,6 @@ public class Transaction {
     private String transactionDate;
     private double amount;
     private String type;
+    private String idAccount;
 
 }
