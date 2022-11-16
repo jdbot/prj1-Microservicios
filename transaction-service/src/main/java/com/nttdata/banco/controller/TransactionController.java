@@ -3,6 +3,7 @@ package com.nttdata.banco.controller;
 import com.nttdata.banco.model.Transaction;
 import com.nttdata.banco.service.ITransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/transaction")
+@RefreshScope
 public class TransactionController {
 
     @Autowired
